@@ -1,5 +1,6 @@
 import logging
 import os
+import requests
 
 from flask import Flask
 from flask_ask import Ask, request, session, question, statement
@@ -12,19 +13,17 @@ logging.getLogger('flask_ask').setLevel(logging.DEBUG)
 
 @ask.launch
 def launch():
-    speech_text = 'Welcome to the Alexa Skills Kit, you can say hello'
+    speech_text = 'Welcome to the Alexa Skills Kit'
     return question(speech_text).reprompt(speech_text).simple_card('HelloWorld', speech_text)
 
-@ask.intent('HelloWorldIntent')
+@ask.intent('RokuHomeIntent')
 def hello_world():
-    speech_text = 'Hello world'
+    speech_text = 'Home Menu'
+    url     = 'http://10.0.0.155:8060/keypress/home'
+    payload = {}
+    headers = {}
+    res = requests.post(url, data=payload, headers=headers)
     return statement(speech_text).simple_card('HelloWorld', speech_text)
-
-
-@ask.intent('AMAZON.HelpIntent')
-def help():
-    speech_text = 'You can say hello to me!'
-    return question(speech_text).reprompt(speech_text).simple_card('HelloWorld', speech_text)
 
 
 @ask.session_ended
