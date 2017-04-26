@@ -38,7 +38,7 @@ def Roku_Up():
 
 @ask.intent('Uptwo')
 def Roku_Uptwo():
-    speech_text = ''
+    speech_text = 'Up two'
     url     = 'http://10.0.0.155:8060/keypress/Up'
     payload = {}
     headers = {}
@@ -46,6 +46,19 @@ def Roku_Uptwo():
     sleep(0.5)
     res = requests.post(url, data=payload, headers=headers)
     return statement(speech_text).simple_card('RokuUptwo', speech_text)
+
+@ask.intent('Upthree')
+def Roku_Uptwo():
+    speech_text = 'Up two'
+    url     = 'http://10.0.0.155:8060/keypress/Up'
+    payload = {}
+    headers = {}
+    res = requests.post(url, data=payload, headers=headers)
+    sleep(0.5)
+    res = requests.post(url, data=payload, headers=headers)
+    sleep(0.5)
+    res = requests.post(url, data=payload, headers=headers)
+    return statement(speech_text).simple_card('RokuUpthree', speech_text)
 
 @ask.session_ended
 def session_ended():
