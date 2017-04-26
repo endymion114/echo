@@ -15,7 +15,6 @@ def launch():
     speech_text = 'Welcome to the Alexa Skills Kit, you can say hello'
     return question(speech_text).reprompt(speech_text).simple_card('HelloWorld', speech_text)
 
-
 @ask.intent('HelloWorldIntent')
 def hello_world():
     speech_text = 'Hello world'
