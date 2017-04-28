@@ -32,6 +32,11 @@ def launch():
     speech_text = 'Welcome to the Alexa Skills Kit'
     return question(speech_text).reprompt(speech_text).simple_card('HelloWorld', speech_text)
 
+@ask.intent('Home')
+def Roku_Home():
+    Callpost('keypress/home')
+    return statement(speech_text).simple_card('RokuHome', speech_text)
+    
 @ask.intent('SearchPlex')
 def SearchPlex(Text):
     speech_text = "Searching for {}".format(Text)
