@@ -57,8 +57,23 @@ def SearchPlex(Text):
     Callpost('keypress/select')
     sleep(0.800)
     createTypeSequence(Text)
-    
-    
+    sleep(0.150)
+    Callpost('keypress/right')
+    sleep(0.150)
+    Callpost('keypress/right')
+    sleep(0.150)
+    Callpost('keypress/right')
+    sleep(0.150)
+    Callpost('keypress/right')
+    sleep(0.150)
+    Callpost('keypress/right')
+    sleep(0.150)
+    Callpost('keypress/right')
+    sleep(0.500)
+    Callpost('keypress/select')
+    sleep(1.700)
+    Callpost('keypress/select')
+    sleep(4.0)
     return statement(speech_text).simple_card("Searchplay", speech_text)
 
 @ask.session_ended
