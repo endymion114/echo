@@ -18,13 +18,13 @@ def Callpost(url):
     res = requests.post(url, data=payload, headers=headers)
 
 def createTypeSequence(text):
-worldlist = list(text)
-for x in worldlist
-    if ord(x) == 32:
-    Callpost('http://10.0.0.155:8060/keypress/Lit_%20')
+    worldlist = list(text)
+    for x in worldlist
+      if ord(x) == 32:
+        Callpost('http://10.0.0.155:8060/keypress/Lit_%20')
 
-    else:
-       Callpost('http://10.0.0.155:8060/keypress/Lit_{}'.format(x))
+        else:
+         Callpost('http://10.0.0.155:8060/keypress/Lit_{}'.format(x))
 
 
 @ask.launch
