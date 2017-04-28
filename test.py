@@ -12,7 +12,8 @@ app = Flask(__name__)
 ask = Ask(app, "/")
 logging.getLogger('flask_ask').setLevel(logging.DEBUG)
 
-def Callpost(url):
+def Callpost(urldata):
+    url = 'http://10.0.0.155:8060/{}'.format(urldata)
     payload = {}
     headers = {}
     res = requests.post(url, data=payload, headers=headers)
