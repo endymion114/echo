@@ -20,8 +20,8 @@ def launch():
 
 @ask.intent('SearchPlex')
 def Test(Text):
-    speach_card = "Searching for {}".format(Text)
-    return statement(speech_text).simple_card(speach_card, speech_text)
+    speech_text = "Searching for {}".format(Text)
+    return statement(speech_text).simple_card("Searchplay", speech_text)
 
 @ask.session_ended
 def session_ended():
