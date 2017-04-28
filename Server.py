@@ -67,7 +67,6 @@ def SearchRoku(Text):
     Callpost('keypress/select')
     sleep(1.700)
     Callpost('keypress/select')
-    sleep(4.0)
     return statement(speech_text).simple_card("Searchroku", speech_text)
 
 @ask.intent('SearchPlex')
@@ -99,7 +98,6 @@ def SearchPlex(Text):
     Callpost('keypress/select')
     sleep(1.700)
     Callpost('keypress/select')
-    sleep(4.0)
     return statement(speech_text).simple_card("Searchplex", speech_text)
 
 @ask.intent('Playlastyoutube')
@@ -122,7 +120,6 @@ def Last_Your_Tube():
     Callpost('keypress/select')
     sleep(3.200)
     Callpost('keypress/select')
-    sleep(3.000)
     return statement(speech_text).simple_card('Playlastyoutube ', speech_text)
 
 @ask.intent('PlayPause')
