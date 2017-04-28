@@ -12,12 +12,12 @@ app = Flask(__name__)
 ask = Ask(app, "/")
 logging.getLogger('flask_ask').setLevel(logging.DEBUG)
 
-def Callpost(url)
+def Callpost(url):
     payload = {}
     headers = {}
     res = requests.post(url, data=payload, headers=headers)
 
-def createTypeSequence(text)
+def createTypeSequence(text):
 worldlist = list(text)
 for x in worldlist
     if ord(x) == 32:
