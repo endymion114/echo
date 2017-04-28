@@ -19,7 +19,7 @@ def Callpost(url):
 
 def createTypeSequence(text):
     worldlist = list(text)
-    for x in worldlist
+    for x in worldlist:
       if ord(x) == 32:
         Callpost('http://10.0.0.155:8060/keypress/Lit_%20')
 
