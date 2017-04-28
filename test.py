@@ -210,7 +210,7 @@ def Hulu():
     Callpost('/launch/2285')
     return statement(speech_text).simple_card('Hulu', speech_text)
 
-@ask.intent('Plex)
+@ask.intent('Plex')
 def Plex():
     speech_text = 'Starting Plex'
     Callpost('/launch/13535')
