@@ -12,6 +12,20 @@ app = Flask(__name__)
 ask = Ask(app, "/")
 logging.getLogger('flask_ask').setLevel(logging.DEBUG)
 
+def Callpost(url)
+    payload = {}
+    headers = {}
+    res = requests.post(url, data=payload, headers=headers)
+
+def createTypeSequence(text)
+worldlist = list(text)
+for x in worldlist
+    if ord(x) == 32:
+    Callpost('http://10.0.0.155:8060/keypress/Lit_%20')
+
+    else:
+       Callpost('http://10.0.0.155:8060/keypress/Lit_{}'.format(x))
+
 
 @ask.launch
 def launch():
@@ -19,13 +33,20 @@ def launch():
     return question(speech_text).reprompt(speech_text).simple_card('HelloWorld', speech_text)
 
 @ask.intent('SearchPlex')
-def Test(Text):
+def SearchPlex(Text):
     speech_text = "Searching for {}".format(Text)
+    Callpost('http://10.0.0.155:8060/keypress/home')
+    
     return statement(speech_text).simple_card("Searchplay", speech_text)
 
 @ask.session_ended
 def session_ended():
     return "{}", 200
+
+
+
+
+def createTypeSequence(Text)
 
 
 if __name__ == '__main__':
