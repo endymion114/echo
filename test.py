@@ -22,9 +22,9 @@ def createTypeSequence(text):
     worldlist = list(text)
     for x in worldlist:
       if ord(x) == 32:
-        Callpost('http://10.0.0.155:8060/keypress/Lit_%20')
+        Callpost('keypress/Lit_%20')
       else:
-        Callpost('http://10.0.0.155:8060/keypress/Lit_{}'.format(x))
+        Callpost('keypress/Lit_{}'.format(x))
 
 
 @ask.launch
@@ -35,7 +35,7 @@ def launch():
 @ask.intent('SearchPlex')
 def SearchPlex(Text):
     speech_text = "Searching for {}".format(Text)
-    Callpost('http://10.0.0.155:8060/keypress/home')
+    Callpost('keypress/home')
     
     return statement(speech_text).simple_card("Searchplay", speech_text)
 
