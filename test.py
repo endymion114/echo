@@ -34,6 +34,7 @@ def launch():
 
 @ask.intent('Home')
 def Roku_Home():
+    speech_text = 'Going Home'
     Callpost('keypress/home')
     return statement(speech_text).simple_card('RokuHome', speech_text)
     
@@ -41,6 +42,22 @@ def Roku_Home():
 def SearchPlex(Text):
     speech_text = "Searching for {}".format(Text)
     Callpost('keypress/home')
+    Callpost('keypress/home')
+    sleep(0.2200)
+    Callpost('keypress/down')
+    sleep(0.150)
+    Callpost('keypress/down')
+    sleep(0.150)
+    Callpost('keypress/down')
+    sleep(0.150)
+    Callpost('keypress/down')
+    sleep(0.150)
+    Callpost('keypress/down')
+    sleep(0.150)
+    Callpost('keypress/select')
+    sleep(0.800)
+    createTypeSequence(Text)
+    
     
     return statement(speech_text).simple_card("Searchplay", speech_text)
 
