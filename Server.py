@@ -25,12 +25,258 @@ def createTypeSequence(text):
         Callpost('keypress/Lit_%20')
       else:
         Callpost('keypress/Lit_{}'.format(x))
-
-
+        
 @ask.launch
 def launch():
     speech_text = 'Welcome to the Alexa Skills Kit'
     return question(speech_text).reprompt(speech_text).simple_card('HelloWorld', speech_text)
+
+
+@ask.intent('Uptwo')
+def Uptwo():
+    speech_text = 'moving Up two'
+    Callpost('keypress/Up')
+    sleep(0.150)
+    Callpost('keypress/Up')
+    sleep(0.150)
+    return statement(speech_text).simple_card('Uptwo', speech_text)
+
+@ask.intent('Upthree')
+def Upthree():
+    speech_text = 'moving Up three'
+    Callpost('keypress/Up')
+    sleep(0.150)
+    Callpost('keypress/Up')
+    sleep(0.150)
+    Callpost('keypress/Up')
+    sleep(0.150)
+    return statement(speech_text).simple_card('Upthree', speech_text)
+
+@ask.intent('Upfour')
+def Upfour():
+    speech_text = 'moving Up four'
+    Callpost('keypress/Up')
+    sleep(0.150)
+    Callpost('keypress/Up')
+    sleep(0.150)
+    Callpost('keypress/Up')
+    sleep(0.150)
+    Callpost('keypress/Up')
+    sleep(0.150)
+    return statement(speech_text).simple_card('Upfour', speech_text)
+
+@ask.intent('Upfive')
+def Upfive():
+    speech_text = 'moving Up five'
+    Callpost('keypress/Up')
+    sleep(0.150)
+    Callpost('keypress/Up')
+    sleep(0.150)
+    Callpost('keypress/Up')
+    sleep(0.150)
+    Callpost('keypress/Up')
+    sleep(0.150)
+    Callpost('keypress/Up')
+    sleep(0.150)
+    return statement(speech_text).simple_card('Upfive', speech_text)
+
+@ask.intent('Downtwo')
+def Downtwo():
+    speech_text = 'moving Down two'
+    Callpost('keypress/Down')
+    sleep(0.150)
+    Callpost('keypress/Down')
+    sleep(0.150)
+    return statement(speech_text).simple_card('Downtwo', speech_text)
+
+@ask.intent('Downthree')
+def Downthree():
+    speech_text = 'moving Down three'
+    Callpost('keypress/Down')
+    sleep(0.150)
+    Callpost('keypress/Down')
+    sleep(0.150)
+    Callpost('keypress/Down')
+    sleep(0.150)
+    return statement(speech_text).simple_card('Downthree', speech_text)
+
+@ask.intent('Downfour')
+def Downfour():
+    speech_text = 'moving Down four'
+    Callpost('keypress/Down')
+    sleep(0.150)
+    Callpost('keypress/Down')
+    sleep(0.150)
+    Callpost('keypress/Down')
+    sleep(0.150)
+    Callpost('keypress/Down')
+    sleep(0.150)
+    return statement(speech_text).simple_card('Downfour', speech_text)
+
+@ask.intent('Downfive')
+def Downfive():
+    speech_text = 'moving Down five'
+    Callpost('keypress/Down')
+    sleep(0.150)
+    Callpost('keypress/Down')
+    sleep(0.150)
+    Callpost('keypress/Down')
+    sleep(0.150)
+    Callpost('keypress/Down')
+    sleep(0.150)
+    Callpost('keypress/Down')
+    sleep(0.150)
+    return statement(speech_text).simple_card('Downfive', speech_text)
+
+@ask.intent('Righttwo')
+def Righttwo():
+    speech_text = 'moving Right two'
+    Callpost('keypress/Right')
+    sleep(0.150)
+    Callpost('keypress/Right')
+    sleep(0.150)
+    return statement(speech_text).simple_card('Righttwo', speech_text)
+
+@ask.intent('Rightthree')
+def Rightthree():
+    speech_text = 'moving Right three'
+    Callpost('keypress/Right')
+    sleep(0.150)
+    Callpost('keypress/Right')
+    sleep(0.150)
+    Callpost('keypress/Right')
+    sleep(0.150)
+    return statement(speech_text).simple_card('Rightthree', speech_text)
+
+@ask.intent('Rightfour')
+def Rightfour():
+    speech_text = 'moving Right four'
+    Callpost('keypress/Right')
+    sleep(0.150)
+    Callpost('keypress/Right')
+    sleep(0.150)
+    Callpost('keypress/Right')
+    sleep(0.150)
+    Callpost('keypress/Right')
+    sleep(0.150)
+    return statement(speech_text).simple_card('Rightfour', speech_text)
+
+@ask.intent('Rightfive')
+def Rightfive():
+    speech_text = 'moving Right five'
+    Callpost('keypress/Right')
+    sleep(0.150)
+    Callpost('keypress/Right')
+    sleep(0.150)
+    Callpost('keypress/Right')
+    sleep(0.150)
+    Callpost('keypress/Right')
+    sleep(0.150)
+    Callpost('keypress/Right')
+    sleep(0.150)
+    return statement(speech_text).simple_card('Rightfive', speech_text)
+
+@ask.intent('Lefttwo')
+def lefttwo():
+    speech_text = 'moving left two'
+    Callpost('keypress/left')
+    sleep(0.150)
+    Callpost('keypress/left')
+    sleep(0.150)
+    return statement(speech_text).simple_card('lefttwo', speech_text)
+
+@ask.intent('Leftthree')
+def leftthree():
+    speech_text = 'moving left three'
+    Callpost('keypress/left')
+    sleep(0.150)
+    Callpost('keypress/left')
+    sleep(0.150)
+    Callpost('keypress/left')
+    sleep(0.150)
+    return statement(speech_text).simple_card('leftthree', speech_text)
+
+@ask.intent('Leftfour')
+def leftfour():
+    speech_text = 'moving left four'
+    Callpost('keypress/left')
+    sleep(0.150)
+    Callpost('keypress/left')
+    sleep(0.150)
+    Callpost('keypress/left')
+    sleep(0.150)
+    Callpost('keypress/left')
+    sleep(0.150)
+    return statement(speech_text).simple_card('leftfour', speech_text)
+
+@ask.intent('Leftfive')
+def leftfive():
+    speech_text = 'moving left five'
+    Callpost('keypress/left')
+    sleep(0.150)
+    Callpost('keypress/left')
+    sleep(0.150)
+    Callpost('keypress/left')
+    sleep(0.150)
+    Callpost('keypress/left')
+    sleep(0.150)
+    Callpost('keypress/left')
+    sleep(0.150)
+    return statement(speech_text).simple_card('leftfive', speech_text)
+
+@ask.intent('Captionon')
+def captionon():
+    speech_text = 'Caption on'
+    Callpost('keypress/info')
+    sleep(0.150)
+    Callpost('keypress/down')
+    sleep(0.150)
+    Callpost('keypress/down')
+    sleep(0.150)
+    Callpost('keypress/down')
+    sleep(0.150)
+    Callpost('keypress/down')
+    sleep(0.150)
+    Callpost('keypress/down')
+    sleep(0.150)
+    Callpost('keypress/right')
+    sleep(0.150)
+    Callpost('keypress/info')
+    sleep(0.150)
+    return statement(speech_text).simple_card('captionon', speech_text)
+
+@ask.intent('Captionoff')
+def captionoff():
+    speech_text = 'Caption off'
+    Callpost('keypress/info')
+    sleep(0.150)
+    Callpost('keypress/down')
+    sleep(0.150)
+    Callpost('keypress/down')
+    sleep(0.150)
+    Callpost('keypress/down')
+    sleep(0.150)
+    Callpost('keypress/down')
+    sleep(0.150)
+    Callpost('keypress/down')
+    sleep(0.150)
+    Callpost('keypress/left')
+    sleep(0.150)
+    Callpost('keypress/info')
+    sleep(0.150)
+    return statement(speech_text).simple_card('captionoff', speech_text)
+
+@ask.intent('Type')
+def Typing(Text):
+    speech_text = "Typing {}".format(Text)
+    createTypeSequence(text)
+    return statement(speech_text).simple_card('Type', speech_text)
+
+@ask.intent('Search')
+def Search(Text):
+    speech_text = "Searching for {}".format(Text)
+    createTypeSequence(text)
+    return statement(speech_text).simple_card('Search', speech_text)
     
 @ask.intent('SearchRoku')
 def SearchRoku(Text):
